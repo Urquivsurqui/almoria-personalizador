@@ -26,11 +26,11 @@ export default function Frase({ siguiente, atras }: Props) {
             </p>
 
             <textarea
-                value={config.frase}
+                value={config.fraseMadera}
                 onChange={(e) =>
                     setConfig({
                         ...config,
-                        frase: e.target.value,
+                        fraseMadera: e.target.value,
                     })
                 }
                 placeholder="Ejemplo: Siempre contigo ❤️"
