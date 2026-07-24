@@ -37,15 +37,13 @@ export default function Color({
 
     const { config, setConfig } = useConfigurador();
 
-    const colores = Object.keys(
+    const equipo = catalogo[config.equipo as keyof typeof catalogo];
 
-        catalogo[
-            config.equipo as keyof typeof catalogo
-        ].modelos[
-            config.modelo as keyof typeof catalogo[typeof config.equipo]["modelos"]
-        ].colores
+    const modelo = equipo.modelos[
+        config.modelo as keyof typeof equipo.modelos
+    ];
 
-    );
+    const colores = Object.keys(modelo.colores);
 
     return (
 
