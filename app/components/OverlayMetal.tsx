@@ -21,12 +21,13 @@ export default function OverlayMetal({
 
     if (!config.equipo || !config.modelo) return null;
 
-    const p =
-        coordenadas[
+    const equipo = coordenadas[
         config.equipo as keyof typeof coordenadas
-        ][
-        config.modelo as keyof typeof coordenadas[typeof config.equipo]
-        ];
+    ];
+
+    const p = equipo[
+        config.modelo as keyof typeof equipo
+    ];
 
     const size = 20;
 
