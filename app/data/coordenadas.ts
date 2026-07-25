@@ -226,6 +226,49 @@ export const coordenadas = {
 
         },
 
+        casaca: {
+
+            logo: {
+                x: 254,
+                y: 660,
+                size: 115,
+            },
+
+            nombre: {
+                x: 374,
+                y: 650,
+                size: 17,
+            },
+
+            frase: {
+                x: 374,
+                y: 695,
+                size: 14,
+            },
+
+            adornoSuperior: {
+                x: 376,
+                y: 620,
+                width: 270,
+                height: 12,
+            },
+
+            adornoInferior: {
+                x: 376,
+                y: 680,
+                width: 274,
+                height: 12,
+            },
+
+            metal: {
+                x: 310,
+                y: 160,
+                width: 160,
+                size: 20,
+            },
+
+        },
+
     },
 
 };

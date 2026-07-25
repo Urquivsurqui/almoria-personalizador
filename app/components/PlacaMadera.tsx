@@ -70,10 +70,10 @@ export default function PlacaMadera({
                             nombre: e.target.value.toUpperCase(),
                         })
                     }
-                    placeholder="Ej. ADOLFO VARGAS"
+                    placeholder="Ej. JUAN VARGAS"
                     className={`w-full mt-3 rounded-2xl p-4 text-lg border transition ${intentadoContinuar && config.nombre.trim() === ""
-                            ? "border-red-500"
-                            : "border-gray-300"
+                        ? "border-red-500"
+                        : "border-gray-300"
                         }`}
                 />
 
@@ -118,8 +118,8 @@ export default function PlacaMadera({
                                 })
                             }
                             className={`rounded-2xl border p-4 text-left transition ${config.fraseMadera === frase.texto
-                                    ? "bg-black text-white border-black"
-                                    : "hover:bg-gray-100"
+                                ? "bg-black text-white border-black"
+                                : "hover:bg-gray-100"
                                 }`}
                         >
 
