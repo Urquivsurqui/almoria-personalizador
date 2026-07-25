@@ -27,7 +27,7 @@ export default function Pasos({
     return (
         <>
 
-            <Progress paso={paso} total={8} />
+            <Progress paso={paso} />
 
             {paso === 1 && (
                 <Equipos siguiente={siguiente} />
