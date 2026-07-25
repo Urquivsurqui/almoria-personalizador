@@ -6,7 +6,7 @@ type Props = {
 
 export default function Progress({ paso }: Props) {
 
-    const porcentaje = (paso / 6) * 100;
+    const porcentaje = (paso / 8) * 100;
 
     return (
 
@@ -16,7 +16,7 @@ export default function Progress({ paso }: Props) {
 
                 <span className="text-sm text-gray-500">
 
-                    Paso {paso} de 6
+                    Paso {paso} de 8
 
                 </span>
 
