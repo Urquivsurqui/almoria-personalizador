@@ -103,12 +103,13 @@ export default function VistaPrevia({
 
     if (config.modelo) {
 
-        const modelo =
-            catalogo[
-                config.equipo as keyof typeof catalogo
-            ].modelos[
-            config.modelo as keyof typeof catalogo[typeof config.equipo]["modelos"]
-            ];
+        const equipo = catalogo[
+            config.equipo as keyof typeof catalogo
+        ];
+
+        const modelo = equipo.modelos[
+            config.modelo as keyof typeof equipo.modelos
+        ];
 
         imagen = modelo.preview;
 
@@ -130,12 +131,13 @@ export default function VistaPrevia({
                 ].modelos
             )[0];
 
-        imagen =
-            catalogo[
-                config.equipo as keyof typeof catalogo
-            ].modelos[
-                primerModelo as keyof typeof catalogo[typeof config.equipo]["modelos"]
-            ].preview;
+        const equipo = catalogo[
+            config.equipo as keyof typeof catalogo
+        ];
+
+        imagen = equipo.modelos[
+            primerModelo as keyof typeof equipo.modelos
+        ].preview;
 
     }
 
