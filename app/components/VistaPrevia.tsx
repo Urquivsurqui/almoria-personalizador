@@ -193,7 +193,6 @@ export default function VistaPrevia({
 
                 <OverlayMadera
                     config={config}
-                    mobile={mobile}
                     escala={escala}
                 />
 
