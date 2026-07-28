@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { catalogo } from "../data/catalogo";
+import { useEffect, useRef, useState } from "react";
 import {
     useConfigurador,
     type Configuracion,
@@ -13,15 +14,39 @@ import VistaPlacaMetal from "./VistaPlacaMetal";
 type Props = {
     paso: number;
     config?: Configuracion;
+    mobile?: boolean;
 };
-
 export default function VistaPrevia({
     paso,
     config: configProp,
+    mobile = false,
 }: Props) {
 
     const contexto = useConfigurador();
+    const contenedorRef = useRef<HTMLDivElement>(null);
 
+    const [escala, setEscala] = useState(1);
+    useEffect(() => {
+
+        function actualizarEscala() {
+
+            if (!contenedorRef.current) return;
+
+            const ancho = contenedorRef.current.offsetWidth;
+
+            setEscala(ancho / 700);
+
+        }
+
+        actualizarEscala();
+
+        window.addEventListener("resize", actualizarEscala);
+
+        return () => {
+            window.removeEventListener("resize", actualizarEscala);
+        };
+
+    }, []);
     const config = configProp ?? contexto.config;
 
     /* =========================
@@ -49,7 +74,7 @@ export default function VistaPrevia({
                     </h2>
 
                     <p className="text-gray-600 text-xl leading-9 mt-5 max-w-lg">
-                        Personaliza tu portalápices en solo unos pasos.
+                        Personaliza tu organizador de escritorio en solo unos pasos.
                         <br />
                         <br />
                         Diseña un recuerdo exclusivo para los verdaderos hinchas.
@@ -92,7 +117,12 @@ export default function VistaPrevia({
     ========================= */
 
     if (paso === 5) {
-        return <VistaPlacaMetal config={config} />;
+        return (
+            <VistaPlacaMetal
+                config={config}
+                mobile={mobile}
+            />
+        );
     }
 
     /* =========================
@@ -146,15 +176,11 @@ export default function VistaPrevia({
     ========================= */
 
     return (
-
         <div className="flex justify-center items-center h-full w-full">
 
             <div
-                className="relative transition-all duration-300"
-                style={{
-                    width: 700,
-                    height: 900,
-                }}
+                ref={contenedorRef}
+                className="relative w-full max-w-[700px] aspect-[7/9] transition-all duration-300"
             >
 
                 <Image
@@ -165,7 +191,11 @@ export default function VistaPrevia({
                     className="object-contain drop-shadow-2xl"
                 />
 
-                <OverlayMadera config={config} />
+                <OverlayMadera
+                    config={config}
+                    mobile={mobile}
+                    escala={escala}
+                />
 
             </div>
 

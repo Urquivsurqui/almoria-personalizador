@@ -68,7 +68,7 @@ export default function Equipos({ siguiente }: Props) {
 
                         </div>
 
-                        <h3 className="text-xl font-semibold text-center -mt-3">
+                        <h3 className="mt-2 h-14 flex items-center justify-center text-center text-lg font-semibold leading-tight whitespace-pre-line">
 
                             {equipo.nombre}
 

@@ -2,7 +2,7 @@ export const equipos = [
 
     {
         id: "universitario",
-        nombre: "Universitario",
+        nombre: "Universitario\nde Deportes",
         logo: "/iconos/color/universitario.png",
 
         modelos: [
@@ -18,7 +18,7 @@ export const equipos = [
 
     {
         id: "alianza",
-        nombre: "Alianza Lima",
+        nombre: "Alianza\nLima",
         logo: "/iconos/color/alianza.png",
 
         modelos: [
@@ -34,7 +34,7 @@ export const equipos = [
 
     {
         id: "cristal",
-        nombre: "Sporting Cristal",
+        nombre: "Sporting\nCristal",
         logo: "/iconos/color/cristal.png",
 
         modelos: [

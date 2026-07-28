@@ -3,23 +3,26 @@
 import Image from "next/image";
 import { useConfigurador, type Configuracion } from "../context/ConfiguradorContext";
 import { coordenadas } from "../data/coordenadas";
-import { Bebas_Neue } from "next/font/google";
-const bebas = Bebas_Neue({
-    weight: "400",
-    subsets: ["latin"],
-});
+import { Barlow_Condensed } from "next/font/google";
 
+const barlow = Barlow_Condensed({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+});
 type Props = {
     config?: Configuracion;
+    escala?: number;
 };
-
-export default function OverlayMadera({ config: configProp }: Props) {
-
+export default function OverlayMadera({
+    config: configProp,
+    escala = 1,
+}: Props) {
     const contexto = useConfigurador();
 
     const config = configProp ?? contexto.config;
 
     if (!config.equipo || !config.modelo) return null;
+
 
     const equipo = coordenadas[
         config.equipo as keyof typeof coordenadas
@@ -35,23 +38,30 @@ export default function OverlayMadera({ config: configProp }: Props) {
    TAMAÑO DEL NOMBRE
     ========================== */
 
-    let nombreSize = p.nombre.size + 40;
+    let nombreSize = p.nombre.size + 26;
+
+    const anchoNombre = 182;
+    const minNombreSize = 18;
 
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
     if (ctx) {
 
-        ctx.font = `${nombreSize}px Arial`;
-
+        ctx.font = `700 ${nombreSize}px Barlow Condensed`;
+        console.log(
+            ctx.measureText(config.nombre).width,
+            anchoNombre,
+            nombreSize
+        );
         while (
-            ctx.measureText(config.nombre).width > 180 &&
-            nombreSize > 24
+            ctx.measureText(config.nombre).width > anchoNombre &&
+            nombreSize > minNombreSize
         ) {
             nombreSize--;
-            ctx.font = `${nombreSize}px Bebas Neue`;
+            ctx.font = `700 ${nombreSize}px Barlow Condensed`;
         }
-
+        console.log("Tamaño final:", nombreSize);
     }
 
     /* ==========================
@@ -104,12 +114,12 @@ export default function OverlayMadera({ config: configProp }: Props) {
             <Image
                 src={logo}
                 alt="Logo"
-                width={logoSize}
-                height={logoSize}
+                width={logoSize * escala}
+                height={logoSize * escala}
                 className="absolute"
                 style={{
-                    left: logoX,
-                    top: p.logo.y,
+                    left: logoX * escala,
+                    top: p.logo.y * escala,
                     transform: "translate(-50%, -50%)",
                 }}
             />
@@ -119,53 +129,51 @@ export default function OverlayMadera({ config: configProp }: Props) {
             <Image
                 src="/adornos/separador3.png"
                 alt=""
-                width={p.adornoSuperior.width}
-                height={p.adornoSuperior.height}
+                width={p.adornoSuperior.width * escala}
+                height={p.adornoSuperior.height * escala}
                 className="absolute"
                 style={{
-                    left: p.adornoSuperior.x,
-                    top: p.adornoSuperior.y,
+                    left: p.adornoSuperior.x * escala,
+                    top: p.adornoSuperior.y * escala,
                     transform: "translate(-50%, -50%)",
                 }}
             />
-
             {/* NOMBRE */}
 
             <div
-                className={`${bebas.className} absolute font-normal`}
+                className={`${barlow.className} absolute font-bold`}
                 style={{
-                    left: p.nombre.x,
-                    top: p.nombre.y,
+                    left: p.nombre.x * escala,
+                    top: p.nombre.y * escala,
                     transform: "translate(-50%, -50%)",
 
-                    width: 210,
+                    width: 182 * escala,
 
                     textAlign: "center",
 
-                    fontSize: config.nombre ? nombreSize : nombreSize - 8,
+                    fontSize: nombreSize * escala,
                     color: "#4e3521",
 
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "clip",
 
-                    whiteSpace: "normal",
-                    wordBreak: "break-word",
-
-                    lineHeight: 0.95,
+                    lineHeight: 1,
                 }}
             >
                 {config.nombre || "TU NOMBRE"}
             </div>
-
             {/* ADORNO INFERIOR */}
 
             <Image
                 src="/adornos/separador3.png"
                 alt=""
-                width={p.adornoInferior.width}
-                height={p.adornoInferior.height}
+                width={p.adornoInferior.width * escala}
+                height={p.adornoInferior.height * escala}
                 className="absolute"
                 style={{
-                    left: p.adornoInferior.x,
-                    top: p.adornoInferior.y,
+                    left: p.adornoInferior.x * escala,
+                    top: p.adornoInferior.y * escala,
                     transform: "translate(-50%, -50%)",
                 }}
             />
@@ -175,15 +183,15 @@ export default function OverlayMadera({ config: configProp }: Props) {
             <div
                 className="absolute italic font-bold"
                 style={{
-                    left: p.frase.x,
-                    top: p.frase.y,
+                    left: p.frase.x * escala,
+                    top: p.frase.y * escala,
                     transform: "translate(-50%, -50%)",
 
-                    width: 210,
+                    width: 210 * escala,
 
                     textAlign: "center",
 
-                    fontSize: fraseSize,
+                    fontSize: fraseSize * escala,
                     color: "#6a5747",
 
                     whiteSpace: "pre-line",

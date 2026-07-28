@@ -12,7 +12,7 @@ export const coordenadas = {
 
             nombre: {
                 x: 383,
-                y: 636,
+                y: 633,
                 size: 17,
             },
 
@@ -55,7 +55,7 @@ export const coordenadas = {
 
             nombre: {
                 x: 383,
-                y: 650,
+                y: 647,
                 size: 17,
             },
 
@@ -103,7 +103,7 @@ export const coordenadas = {
 
             nombre: {
                 x: 383,
-                y: 636,
+                y: 633,
                 size: 17,
             },
 
@@ -146,7 +146,7 @@ export const coordenadas = {
 
             nombre: {
                 x: 383,
-                y: 650,
+                y: 647,
                 size: 17,
             },
 
@@ -193,7 +193,7 @@ export const coordenadas = {
 
             nombre: {
                 x: 376,
-                y: 636,
+                y: 633,
                 size: 17,
             },
 
@@ -236,7 +236,7 @@ export const coordenadas = {
 
             nombre: {
                 x: 374,
-                y: 650,
+                y: 647,
                 size: 17,
             },
 

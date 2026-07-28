@@ -18,7 +18,7 @@ export default function PlacaMetal({
     const { config, setConfig } = useConfigurador();
 
     const [categoria, setCategoria] =
-        useState<keyof typeof frasesMetal>("familia");
+        useState<keyof typeof frasesMetal>("regalo");
 
     const [intentadoContinuar, setIntentadoContinuar] = useState(false);
 
@@ -55,43 +55,23 @@ export default function PlacaMetal({
             <div className="grid grid-cols-2 gap-4 mt-10">
 
                 <button
-                    onClick={() => setCategoria("familia")}
-                    className={`rounded-2xl border p-4 transition ${categoria === "familia"
+                    onClick={() => setCategoria("regalo")}
+                    className={`rounded-2xl border p-4 transition ${categoria === "regalo"
                             ? "bg-black text-white border-black"
                             : "hover:bg-gray-100"
                         }`}
                 >
-                    ❤️ Familia
+                    🎁 Es un regalo
                 </button>
 
                 <button
-                    onClick={() => setCategoria("pareja")}
-                    className={`rounded-2xl border p-4 transition ${categoria === "pareja"
+                    onClick={() => setCategoria("personal")}
+                    className={`rounded-2xl border p-4 transition ${categoria === "personal"
                             ? "bg-black text-white border-black"
                             : "hover:bg-gray-100"
                         }`}
                 >
-                    💑 Pareja
-                </button>
-
-                <button
-                    onClick={() => setCategoria("amigos")}
-                    className={`rounded-2xl border p-4 transition ${categoria === "amigos"
-                            ? "bg-black text-white border-black"
-                            : "hover:bg-gray-100"
-                        }`}
-                >
-                    👨 Amigos
-                </button>
-
-                <button
-                    onClick={() => setCategoria("hincha")}
-                    className={`rounded-2xl border p-4 transition ${categoria === "hincha"
-                            ? "bg-black text-white border-black"
-                            : "hover:bg-gray-100"
-                        }`}
-                >
-                    ⚽ Hincha
+                    ❤️ Es para mí
                 </button>
 
             </div>
@@ -111,8 +91,8 @@ export default function PlacaMetal({
                             })
                         }
                         className={`rounded-2xl border p-4 text-left transition ${config.fraseMetal === frase
-                                ? "bg-black text-white border-black"
-                                : "hover:bg-gray-100"
+                            ? "bg-black text-white border-black"
+                            : "hover:bg-gray-100"
                             }`}
                     >
                         {frase}
