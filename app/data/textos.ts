@@ -2,7 +2,7 @@ export const textos = {
 
     equipos: {
 
-        universitario: "Universitario",
+        universitario: "Universitario de Deportes",
 
         alianza: "Alianza Lima",
 

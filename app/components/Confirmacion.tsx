@@ -125,30 +125,65 @@ Gracias. Quedo atento(a) a la confirmación.
                         Producto
                     </h3>
 
-                    <div className="grid grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-4 lg:gap-y-6 text-sm">
+                    <div className="space-y-5">
 
                         <div>
-                            <span className="text-gray-500">Equipo</span>
-                            <p className="font-semibold">{config.equipo || "-"}</p>
+                            <span className="text-gray-500 text-sm">Equipo</span>
+
+                            <p className="font-semibold">
+                                {config.equipo === "universitario" && "Universitario de Deportes"}
+                                {config.equipo === "alianza" && "Alianza Lima"}
+                                {config.equipo === "cristal" && "Sporting Cristal"}
+
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+
+                            <div>
+                                <span className="text-gray-500 text-sm">Modelo</span>
+                                <p className="font-semibold capitalize">
+                                    {config.modelo || "-"}
+                                </p>
+                            </div>
+
+                            <div>
+                                <span className="text-gray-500 text-sm">Color</span>
+                                <p className="font-semibold capitalize">
+                                    {config.color || "-"}
+                                </p>
+                            </div>
+
                         </div>
 
                         <div>
-                            <span className="text-gray-500">Modelo</span>
-                            <p className="font-semibold">{config.modelo || "-"}</p>
-                        </div>
-
-                        <div>
-                            <span className="text-gray-500">Color</span>
-                            <p className="font-semibold">{config.color || "-"}</p>
-                        </div>
-
-                        <div>
-                            <span className="text-gray-500">Nombre</span>
-                            <p className="font-semibold">{config.nombre || "-"}</p>
+                            <span className="text-gray-500 text-sm">Nombre</span>
+                            <p className="font-semibold">
+                                {config.nombre || "-"}
+                            </p>
                         </div>
 
                     </div>
 
+                </div>
+                <div>
+                    <span className="text-gray-500 text-sm">
+                        Frase placa metálica
+                    </span>
+
+                    <p className="font-semibold">
+                        {config.fraseMetal || "-"}
+                    </p>
+                </div>
+
+                <div>
+                    <span className="text-gray-500 text-sm">
+                        Frase en madera
+                    </span>
+
+                    <p className="font-semibold">
+                        {config.fraseMadera || "-"}
+                    </p>
                 </div>
 
                 <hr />
