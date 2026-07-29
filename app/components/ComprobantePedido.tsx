@@ -192,11 +192,7 @@ export default function ComprobantePedido({
 
                                 <Campo
                                     titulo="Equipo"
-                                    valor={
-                                        pedido.equipo
-                                            ? pedido.equipo.charAt(0).toUpperCase() + pedido.equipo.slice(1)
-                                            : "-"
-                                    }
+                                    valor={nombreEquipo(pedido.equipo)}
                                 />
 
                                 <Campo
@@ -208,10 +204,7 @@ export default function ComprobantePedido({
                                     titulo="Color"
                                     valor={capitalizar(pedido.color)}
                                 />
-                                <Campo
-                                    titulo="Equipo"
-                                    valor={nombreEquipo(pedido.equipo)}
-                                />
+
 
                             </div>
 
