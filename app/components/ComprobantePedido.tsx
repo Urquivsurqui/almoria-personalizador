@@ -36,12 +36,11 @@ function Campo({
     valor?: string | number;
 }) {
     return (
-        <div className="rounded-2xl border border-gray-200 p-4">
+        <div className="rounded-2xl border border-gray-200 p-4 min-h-[120px] flex flex-col justify-start">
             <p className="text-xs uppercase tracking-wider text-gray-400">
                 {titulo}
             </p>
-
-            <p className="mt-2 text-gray-900 font-medium break-words">
+            <p className="mt-2 text-gray-900 font-medium leading-relaxed">
                 {valor || "-"}
             </p>
         </div>
@@ -164,11 +163,15 @@ export default function ComprobantePedido({
 
                         <Card titulo="Información del producto">
 
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                                 <Campo
                                     titulo="Equipo"
-                                    valor={pedido.equipo}
+                                    valor={
+                                        pedido.equipo
+                                            ? pedido.equipo.charAt(0).toUpperCase() + pedido.equipo.slice(1)
+                                            : "-"
+                                    }
                                 />
 
                                 <Campo
@@ -346,6 +349,9 @@ export default function ComprobantePedido({
 
                                 S/ {Number(pedido.precio ?? 69.99).toFixed(2)}
 
+                            </p>
+                            <p className="text-sm opacity-70 mt-1">
+                                Precio final
                             </p>
 
                         </div>

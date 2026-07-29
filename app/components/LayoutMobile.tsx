@@ -44,7 +44,7 @@ export default function LayoutMobile() {
                         </h1>
 
                         <p className="text-gray-600 text-base mt-2 leading-relaxed text-center">
-                            Personaliza tu organizador de escritorio en solo unos pasos.
+                            Diseña un portalapicero personalizado para el verdadero hincha.
                         </p>
 
                         {/* TARJETAS */}
@@ -72,7 +72,7 @@ export default function LayoutMobile() {
                                     🚚
                                 </div>
 
-                                <h2 className="mt-2 text-xl lg:text-2xl font-bold text-green-700">
+                                <h2 className="mt-2 text-xl lg:text-2xl font-bold text-green-700 whitespace-nowrap">
                                     Envío GRATIS
                                 </h2>
 

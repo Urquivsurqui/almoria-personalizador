@@ -73,11 +73,8 @@ export default function VistaPrevia({
                         Crea un regalo único
                     </h2>
 
-                    <p className="text-gray-600 text-xl leading-9 mt-5 max-w-lg">
-                        Personaliza tu organizador de escritorio en solo unos pasos.
-                        <br />
-                        <br />
-                        Diseña un recuerdo exclusivo para los verdaderos hinchas.
+                    <p className="text-gray-600 text-xl leading-9 mt-5 max-w-xl">
+                        Diseña un portalapicero personalizado para el verdadero hincha.
                     </p>
 
                     <div className="mt-8 space-y-4 text-lg">
