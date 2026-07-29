@@ -205,15 +205,14 @@ export default function ComprobantePedido({
                                     valor={capitalizar(pedido.color)}
                                 />
 
-
-                            </div>
-
-                            <div className="mt-6 space-y-4">
-
                                 <Campo
                                     titulo="Frase en madera"
                                     valor={pedido.fraseMadera}
                                 />
+
+                            </div>
+
+                            <div className="mt-6">
 
                                 <Campo
                                     titulo="Frase en placa"
