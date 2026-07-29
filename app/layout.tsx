@@ -1,6 +1,7 @@
 import { ConfiguradorProvider } from "./context/ConfiguradorContext";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,8 +13,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
 
 export const metadata: Metadata = {
   title: "Almoria | Personaliza tu portalápices",
@@ -41,11 +40,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Almoria",
-    description:
-      "Portalápices personalizados para hinchas.",
+    description: "Portalápices personalizados para hinchas.",
     images: ["/og-image.png"],
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body>
@@ -61,6 +60,8 @@ export default function RootLayout({
           {children}
         </ConfiguradorProvider>
       </body>
+
+      <GoogleAnalytics gaId="G-52JLKJM7NS" />
     </html>
   );
 }

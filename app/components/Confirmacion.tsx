@@ -165,7 +165,11 @@ Gracias. Quedo atento(a) a la confirmación.
 
                         <p><strong>Celular:</strong> {config.envio.celular}</p>
 
-                        <p><strong>DNI:</strong> {config.envio.dni}</p>
+                        {config.envio.tipo === "provincia" && (
+                            <p>
+                                <strong>DNI:</strong> {config.envio.dni}
+                            </p>
+                        )}
 
                         {config.envio.departamento && (
                             <p><strong>Departamento:</strong> {config.envio.departamento}</p>
