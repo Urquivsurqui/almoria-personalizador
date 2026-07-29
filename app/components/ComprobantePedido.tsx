@@ -46,7 +46,32 @@ function Campo({
         </div>
     );
 }
+function capitalizar(texto?: string) {
+    if (!texto) return "-";
 
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+function nombreEquipo(equipo?: string) {
+
+    switch (equipo) {
+
+        case "universitario":
+            return "Universitario de Deportes";
+
+        case "alianza":
+            return "Alianza Lima";
+
+        case "cristal":
+            return "Sporting Cristal";
+
+
+        default:
+            return capitalizar(equipo);
+
+    }
+
+}
 export default function ComprobantePedido({
     pedido,
 }: Props) {
@@ -176,17 +201,16 @@ export default function ComprobantePedido({
 
                                 <Campo
                                     titulo="Modelo"
-                                    valor={pedido.modelo}
+                                    valor={capitalizar(pedido.modelo)}
                                 />
 
                                 <Campo
                                     titulo="Color"
-                                    valor={pedido.color}
+                                    valor={capitalizar(pedido.color)}
                                 />
-
                                 <Campo
-                                    titulo="Nombre"
-                                    valor={pedido.nombre}
+                                    titulo="Equipo"
+                                    valor={nombreEquipo(pedido.equipo)}
                                 />
 
                             </div>

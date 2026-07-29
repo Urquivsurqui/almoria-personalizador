@@ -109,7 +109,7 @@ Gracias. Quedo atento(a) a la confirmación.
                 PASO 8 DE 8
             </p>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif mt-3 lg:mt-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif mt-3 lg:mt-4 leading-tight whitespace-nowrap">
                 ¡Tu diseño está listo! 🎉
             </h2>
 
