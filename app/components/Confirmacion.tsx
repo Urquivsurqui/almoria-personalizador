@@ -109,23 +109,23 @@ Gracias. Quedo atento(a) a la confirmación.
                 PASO 8 DE 8
             </p>
 
-            <h2 className="text-3xl lg:text-5xl font-serif mt-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif mt-3 lg:mt-4 leading-tight">
                 ¡Tu diseño está listo! 🎉
             </h2>
 
-            <p className="text-gray-500 mt-3 text-sm lg:text-base leading-relaxed">
+            <p className="text-gray-500 mt-2 lg:mt-3 text-sm lg:text-base leading-relaxed" >
                 Revisa la información y presiona el botón para enviarnos tu pedido por WhatsApp.
             </p>
 
-            <div className="mt-10 rounded-3xl border bg-white shadow-sm p-8 space-y-8">
+            <div className="mt-6 lg:mt-10 rounded-3xl border bg-white shadow-sm p-4 sm:p-6 lg:p-8 space-y-6 lg:space-y-8">
 
                 <div>
 
-                    <h3 className="text-xl font-semibold mb-4">
+                    <h3 className="text-lg lg:text-xl font-semibold mb-3 lg:mb-4">
                         Producto
                     </h3>
 
-                    <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="grid grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-4 lg:gap-y-6 text-sm">
 
                         <div>
                             <span className="text-gray-500">Equipo</span>
@@ -155,11 +155,11 @@ Gracias. Quedo atento(a) a la confirmación.
 
                 <div>
 
-                    <h3 className="text-xl font-semibold mb-4">
+                    <h3 className="text-lg lg:text-xl font-semibold mb-3 lg:mb-4">
                         Datos de envío
                     </h3>
 
-                    <div className="space-y-2 text-sm">
+                    <div className="space-y-1.5 lg:space-y-2 text-sm">
 
                         <p><strong>Nombre:</strong> {config.envio.nombre}</p>
 
@@ -192,15 +192,15 @@ Gracias. Quedo atento(a) a la confirmación.
                         )}
 
                     </div>
-                    <hr />
+                    <hr className="my-5 lg:my-6" />
 
                     <div className="flex justify-between items-center">
 
-                        <span className="text-xl">
+                        <span className="text-lg lg:text-xl">
                             Total
                         </span>
 
-                        <span className="text-3xl font-bold">
+                        <span className="text-2xl lg:text-3xl font-bold">
                             S/{config.precio}
                         </span>
 
@@ -210,17 +210,19 @@ Gracias. Quedo atento(a) a la confirmación.
 
             </div>
 
-            {error && (
+            {
+                error && (
 
-                <div className="mt-6 rounded-xl bg-red-50 border border-red-200 text-red-700 p-4">
+                    <div className="mt-6 rounded-xl bg-red-50 border border-red-200 text-red-700 p-4">
 
-                    {error}
+                        {error}
 
-                </div>
+                    </div>
 
-            )}
+                )
+            }
 
-            <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 p-5">
+            <div className="mt-6 lg:mt-7 rounded-2xl border border-green-200 bg-green-50 p-4 lg:p-5">
 
                 <p className="font-semibold text-green-800">
                     📲 Último paso
@@ -233,25 +235,27 @@ Gracias. Quedo atento(a) a la confirmación.
                 </p>
 
             </div>
-            <div className="flex gap-4 mt-10"></div>
-            <button
-                onClick={atras}
-                disabled={enviando}
-                className="flex-1 rounded-2xl border border-gray-300 py-4 font-semibold hover:bg-gray-100 transition-all duration-200 disabled:opacity-50"
-            >
-                ← Atrás
-            </button>
+            <div className="flex flex-col-reverse gap-3 mt-8 lg:flex-row lg:gap-4 lg:mt-10">
 
-            <button
-                onClick={confirmarPedido}
-                disabled={enviando}
-                className="flex-1 rounded-2xl bg-[#25D366] text-white py-4 font-semibold hover:bg-[#1EBE5D] transition-all duration-200 disabled:opacity-50"
-            >
-                {enviando ? "ABRIENDO WHATSAPP..." : "📲 Enviar por WhatsApp"}
-            </button>
-        </div>
+                <button
+                    onClick={atras}
+                    disabled={enviando}
+                    className="w-full lg:flex-1 rounded-2xl border border-gray-300 py-4 font-semibold lg:hover:bg-gray-100 transition-all duration-200 disabled:opacity-50"
+                >
+                    ← Atrás
+                </button>
 
+                <button
+                    onClick={confirmarPedido}
+                    disabled={enviando}
+                    className="w-full lg:flex-1 rounded-2xl bg-[#25D366] text-white py-4 font-semibold lg:hover:bg-[#1EBE5D] transition-all duration-200 disabled:opacity-50"
+                >
+                    {enviando ? "ABRIENDO WHATSAPP..." : "📲 Enviar por WhatsApp"}
+                </button>
 
+            </div>
+
+        </div >
 
     );
 
