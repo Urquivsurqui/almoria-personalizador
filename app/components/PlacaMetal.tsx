@@ -57,8 +57,8 @@ export default function PlacaMetal({
                 <button
                     onClick={() => setCategoria("regalo")}
                     className={`rounded-2xl border p-4 transition ${categoria === "regalo"
-                            ? "bg-black text-white border-black"
-                            : "hover:bg-gray-100"
+                        ? "bg-black text-white border-black"
+                        : "hover:bg-gray-100"
                         }`}
                 >
                     🎁 Es un regalo
@@ -67,8 +67,8 @@ export default function PlacaMetal({
                 <button
                     onClick={() => setCategoria("personal")}
                     className={`rounded-2xl border p-4 transition ${categoria === "personal"
-                            ? "bg-black text-white border-black"
-                            : "hover:bg-gray-100"
+                        ? "bg-black text-white border-black"
+                        : "hover:bg-gray-100"
                         }`}
                 >
                     ❤️ Es para mí

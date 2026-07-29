@@ -24,20 +24,19 @@ export default function Resumen({
                 PASO 6 DE 7
 
             </p>
-
-            <h2 className="text-5xl font-serif mt-4">
+            <h2 className="text-3xl lg:text-5xl font-serif mt-4">
 
                 Revisa tu pedido
 
             </h2>
 
-            <p className="text-gray-500 mt-3">
+            <p className="text-gray-500 mt-3 text-sm lg:text-base">
 
                 Verifica toda la información antes de continuar.
 
             </p>
 
-            <div className="mt-10 rounded-3xl border bg-white shadow-sm p-8 space-y-6">
+            <div className="mt-8 lg:mt-10 rounded-3xl border bg-white shadow-sm p-5 lg:p-8 space-y-5 lg:space-y-6">
 
                 <Item
                     titulo="🏆 Equipo"
@@ -87,14 +86,14 @@ export default function Resumen({
 
                 <button
                     onClick={atras}
-                    className="flex-1 rounded-2xl border border-gray-300 py-5 font-semibold hover:bg-gray-100 transition"
+                    className="flex-1 rounded-2xl border border-gray-300 py-4 lg:py-5 font-semibold hover:bg-gray-100 transition-all duration-200"
                 >
                     ← Atrás
                 </button>
 
                 <button
                     onClick={siguiente}
-                    className="flex-1 rounded-2xl bg-black text-white py-5 font-semibold hover:opacity-90 transition"
+                    className="flex-1 rounded-2xl bg-black text-white py-4 lg:py-5 font-semibold hover:bg-gray-800 transition-all duration-200"
                 >
                     Continuar →
                 </button>
@@ -125,15 +124,15 @@ function Item({
 
     return (
 
-        <div className="flex justify-between items-start border-b pb-4">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-2 border-b pb-4">
 
-            <span className="text-gray-500">
+            <span className="text-gray-500 text-sm lg:text-base">
 
                 {titulo}
 
             </span>
 
-            <span className="font-semibold text-right max-w-[280px]">
+            <span className="font-semibold text-left lg:text-right max-w-full lg:max-w-[280px] break-words">
 
                 {valor || "-"}
 

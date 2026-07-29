@@ -25,8 +25,8 @@ export default function LayoutMobile() {
                     <Image
                         src="/logo-almoria.png"
                         alt="Almoria"
-                        width={210}
-                        height={210}
+                        width={190}
+                        height={190}
                         className="mx-auto"
                         priority
                     />
@@ -39,7 +39,7 @@ export default function LayoutMobile() {
 
                     <>
 
-                        <h1 className="text-[30px] font-serif font-semibold -mt-6 text-center text-gray-900">
+                        <h1 className="text-[28px] lg:text-[30px] font-serif font-semibold -mt-6 text-center text-gray-900">
                             Crea un regalo único
                         </h1>
 

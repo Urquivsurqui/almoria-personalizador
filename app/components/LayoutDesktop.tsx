@@ -36,17 +36,17 @@ export default function Configurador() {
 
 
 
-                                <div className="mt-8 flex items-center gap-5">
+                                <div className="mt-8 grid grid-cols-2 gap-4">
 
                                     {/* Precio */}
 
-                                    <div className="rounded-2xl bg-amber-50 px-6 py-4">
+                                    <div className="rounded-2xl bg-amber-50 px-6 py-4 h-full">
 
                                         <p className="text-sm text-gray-500">
                                             Precio único
                                         </p>
 
-                                        <p className="text-4xl font-bold text-amber-800">
+                                        <p className="text-3xl xl:text-4xl font-bold text-amber-800">
                                             S/69.99
                                         </p>
 
@@ -54,13 +54,14 @@ export default function Configurador() {
 
                                     {/* Envío */}
 
-                                    <div className="rounded-2xl bg-green-50 px-6 py-4">
+                                    <div className="rounded-2xl bg-green-50 px-6 py-4 h-full">
 
-                                        <p className="font-semibold text-green-700">
-                                            🚚 Envío GRATIS
+                                        <p className="font-semibold text-green-700 text-center leading-5">
+                                            🚚 Envío<br />
+                                            <span className="font-bold">GRATIS</span>
                                         </p>
 
-                                        <p className="text-sm text-gray-500">
+                                        <p className="text-sm text-gray-500 text-center">
                                             A todo el Perú
                                         </p>
 
@@ -68,7 +69,7 @@ export default function Configurador() {
 
                                     {/* Clientes */}
 
-                                    <div className="rounded-2xl bg-yellow-50 px-6 py-4 flex flex-col items-center justify-center">
+                                    <div className="rounded-2xl bg-yellow-50 px-6 py-4 flex flex-col items-center justify-center col-span-2">
 
                                         <div className="text-yellow-500 text-xl tracking-wide">
                                             ★★★★★

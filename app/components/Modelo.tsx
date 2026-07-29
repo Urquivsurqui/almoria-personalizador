@@ -27,15 +27,15 @@ export default function Modelo({ siguiente, atras }: Props) {
                 PASO 2 DE 6
             </p>
 
-            <h2 className="text-5xl font-serif mt-4">
+            <h2 className="text-3xl lg:text-5xl font-serif mt-4">
                 Elige el modelo
             </h2>
 
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 mt-4 text-sm lg:text-base">
                 Selecciona el modelo de portalápices.
             </p>
 
-            <div className="grid grid-cols-2 gap-8 mt-10">
+            <div className="grid grid-cols-2 gap-4 lg:gap-8 mt-8 lg:mt-10">
 
                 {modelos.map(([id, modelo]: any) => (
 
@@ -55,7 +55,7 @@ export default function Modelo({ siguiente, atras }: Props) {
 
                         }}
 
-                        className="border rounded-3xl p-6 hover:shadow-xl hover:scale-105 transition duration-300"
+                        className="border rounded-2xl lg:rounded-3xl p-3 lg:p-6 hover:shadow-xl hover:scale-105 transition duration-300"
 
                     >
 
@@ -67,17 +67,16 @@ export default function Modelo({ siguiente, atras }: Props) {
 
                                 alt={modelo.nombre}
 
-                                width={220}
+                                width={180}
+                                height={180}
 
-                                height={220}
-
-                                className="object-contain h-52"
+                                className="object-contain h-32 lg:h-52 w-auto"
 
                             />
 
                         </div>
 
-                        <h3 className="text-2xl font-semibold mt-6">
+                        <h3 className="text-base lg:text-2xl font-semibold mt-3 lg:mt-6 text-center">
 
                             {modelo.nombre}
 
@@ -95,7 +94,7 @@ export default function Modelo({ siguiente, atras }: Props) {
 
                     onClick={atras}
 
-                    className="px-8 py-3 border rounded-xl hover:bg-gray-100"
+                    className="px-6 lg:px-8 py-3 border rounded-xl hover:bg-gray-100 transition"
 
                 >
 

@@ -53,15 +53,13 @@ export default function Color({
                 PASO 3 DE 6
             </p>
 
-            <h2 className="text-5xl font-serif mt-4">
+            <h2 className="text-3xl lg:text-5xl font-serif mt-4">
                 Elige el color
             </h2>
-
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 mt-4 text-sm lg:text-base">
                 Selecciona el color del portalápices.
             </p>
-
-            <div className="grid grid-cols-2 gap-6 mt-10">
+            <div className="grid grid-cols-2 gap-3 lg:gap-6 mt-8 lg:mt-10">
 
                 {colores.map((color) => (
 
@@ -80,13 +78,12 @@ export default function Color({
 
                         }}
 
-                        className="border rounded-3xl p-6 hover:shadow-xl transition flex items-center gap-5"
-
+                        className="border rounded-2xl lg:rounded-3xl p-3 lg:p-6 hover:shadow-xl transition flex items-center gap-3 lg:gap-5"
                     >
 
                         <div
 
-                            className="w-12 h-12 rounded-full border-2"
+                            className="w-9 h-9 lg:w-12 lg:h-12 rounded-full border-2 flex-shrink-0"
 
                             style={{
 
@@ -97,9 +94,9 @@ export default function Color({
 
                         />
 
-                        <div className="text-left">
+                        <div className="text-left flex-1">
 
-                            <p className="font-semibold text-xl">
+                            <p className="font-semibold text-sm lg:text-xl">
 
                                 {coloresUI[color].nombre}
 
@@ -117,7 +114,7 @@ export default function Color({
 
                 <button
                     onClick={atras}
-                    className="px-8 py-3 border rounded-xl hover:bg-gray-100"
+                    className="px-6 lg:px-8 py-3 border border-gray-300 rounded-xl hover:bg-gray-100 hover:border-gray-400 transition-all duration-200"
                 >
                     ← Atrás
                 </button>
