@@ -233,11 +233,11 @@ Gracias. Quedo atento(a) a la confirmación.
                 </p>
 
             </div>
-
+            <div className="flex gap-4 mt-10"></div>
             <button
                 onClick={atras}
                 disabled={enviando}
-                className="flex-1 rounded-2xl border py-4 font-semibold hover:bg-gray-100 transition disabled:opacity-50"
+                className="flex-1 rounded-2xl border border-gray-300 py-4 font-semibold hover:bg-gray-100 transition-all duration-200 disabled:opacity-50"
             >
                 ← Atrás
             </button>
@@ -245,14 +245,13 @@ Gracias. Quedo atento(a) a la confirmación.
             <button
                 onClick={confirmarPedido}
                 disabled={enviando}
-                className="flex-1 rounded-2xl bg-[#25D366] hover:bg-[#1EBE5D] text-white py-4 font-semibold hover:opacity-90 transition disabled:opacity-50"
+                className="flex-1 rounded-2xl bg-[#25D366] text-white py-4 font-semibold hover:bg-[#1EBE5D] transition-all duration-200 disabled:opacity-50"
             >
                 {enviando ? "ABRIENDO WHATSAPP..." : "📲 Enviar por WhatsApp"}
             </button>
-
         </div>
 
-        </div >
+
 
     );
 
