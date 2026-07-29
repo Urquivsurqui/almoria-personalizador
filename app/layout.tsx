@@ -15,16 +15,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Almoria | Personaliza tu portalápices",
+  metadataBase: new URL("https://almoria.store"),
+
+  title: "Almoria | Personaliza tu portalápicero",
+
   description:
-    "Personaliza un portalápices exclusivo para hinchas de Universitario, Alianza Lima y Sporting Cristal. Envíos a todo el Perú.",
+    "Personaliza un portalápicero exclusivo para hinchas de Universitario, Alianza Lima y Sporting Cristal. Envíos a todo el Perú.",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 
   openGraph: {
-    title: "Almoria | Personaliza tu portalápices",
+    title: "Almoria | Personaliza tu portalápicero",
+
     description:
       "Diseña un regalo único para verdaderos hinchas. Personalización en minutos y envío a todo el Perú.",
+
     url: "https://almoria.store",
+
     siteName: "Almoria",
+
     images: [
       {
         url: "/og-image.png",
@@ -33,14 +46,20 @@ export const metadata: Metadata = {
         alt: "Almoria",
       },
     ],
+
     locale: "es_PE",
+
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Almoria",
-    description: "Portalápices personalizados para hinchas.",
+
+    title: "Almoria | Regalos personalizados para hinchas",
+
+    description:
+      "Diseña un regalo único para verdaderos hinchas.",
+
     images: ["/og-image.png"],
   },
 };
@@ -59,9 +78,9 @@ export default function RootLayout({
         <ConfiguradorProvider>
           {children}
         </ConfiguradorProvider>
-      </body>
 
-      <GoogleAnalytics gaId="G-52JLKJM7NS" />
+        <GoogleAnalytics gaId="G-52JLKJM7NS" />
+      </body>
     </html>
   );
 }
