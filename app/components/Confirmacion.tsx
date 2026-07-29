@@ -40,7 +40,7 @@ export default function Confirmacion({ atras }: Props) {
 *DATOS DE ENVÍO*
 ----------------------------
 *Nombre:* ${config.envio.nombre}
-Celular: ${config.envio.celular}
+*Celular:* ${config.envio.celular}
 
 *Distrito:* ${config.envio.distrito || "-"}
 
