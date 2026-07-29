@@ -56,12 +56,11 @@ export default function Configurador() {
 
                                     <div className="rounded-2xl bg-green-50 px-6 py-4 h-full">
 
-                                        <p className="font-semibold text-green-700 text-center leading-5">
-                                            🚚 Envío<br />
-                                            <span className="font-bold">GRATIS</span>
+                                        <p className="text-lg font-bold text-green-700 text-center whitespace-nowrap">
+                                            🚚 Envío GRATIS
                                         </p>
 
-                                        <p className="text-sm text-gray-500 text-center">
+                                        <p className="text-sm text-gray-500 text-center mt-2">
                                             A todo el Perú
                                         </p>
 
