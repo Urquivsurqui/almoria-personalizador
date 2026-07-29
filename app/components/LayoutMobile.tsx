@@ -51,30 +51,36 @@ export default function LayoutMobile() {
 
                         <div className="grid grid-cols-2 gap-3 mt-8">
 
-                            <div className="rounded-2xl border border-[#efe6d6] bg-[#fdf9ef] p-4">
+                            <div className="rounded-2xl border border-[#efe6d6] bg-[#fdf9ef] p-4 flex flex-col justify-center">
 
-                                <p className="text-sm text-gray-500">
-                                    Precio único
-                                </p>
+                                <div className="text-3xl">
+                                    💰
+                                </div>
 
-                                <h2 className="text-4xl font-bold text-[#9d4b00]">
+                                <h2 className="mt-2 text-3xl lg:text-4xl font-bold text-[#9d4b00]">
                                     S/69.99
                                 </h2>
 
-                            </div>
-
-                            <div className="rounded-2xl border border-[#d8f0df] bg-[#edfdf3] p-4">
-
-                                <h2 className="text-2xl font-bold text-green-700">
-                                    🚚 GRATIS
-                                </h2>
-
-                                <p className="text-sm text-gray-600">
-                                    Envío a todo el Perú
+                                <p className="mt-2 text-sm text-gray-500">
+                                    Precio final
                                 </p>
 
                             </div>
+                            <div className="rounded-2xl border border-[#d8f0df] bg-[#edfdf3] p-4 flex flex-col justify-center">
 
+                                <div className="text-3xl">
+                                    🚚
+                                </div>
+
+                                <h2 className="mt-2 text-xl lg:text-2xl font-bold text-green-700">
+                                    Envío GRATIS
+                                </h2>
+
+                                <p className="mt-2 text-sm text-gray-600">
+                                    Todo el Perú
+                                </p>
+
+                            </div>
                         </div>
 
                         {/* CLIENTES */}

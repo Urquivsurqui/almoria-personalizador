@@ -109,12 +109,12 @@ Gracias. Quedo atento(a) a la confirmación.
                 PASO 8 DE 8
             </p>
 
-            <h2 className="text-5xl font-serif mt-4">
-                Confirmar pedido
+            <h2 className="text-3xl lg:text-5xl font-serif mt-4">
+                ¡Tu diseño está listo! 🎉
             </h2>
 
-            <p className="text-gray-500 mt-3">
-                Revisa toda la información antes de confirmar.
+            <p className="text-gray-500 mt-3 text-sm lg:text-base leading-relaxed">
+                Revisa la información y presiona el botón para enviarnos tu pedido por WhatsApp.
             </p>
 
             <div className="mt-10 rounded-3xl border bg-white shadow-sm p-8 space-y-8">
@@ -220,27 +220,39 @@ Gracias. Quedo atento(a) a la confirmación.
 
             )}
 
-            <div className="flex gap-4 mt-10">
+            <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 p-5">
 
-                <button
-                    onClick={atras}
-                    disabled={enviando}
-                    className="flex-1 rounded-2xl border py-4 font-semibold hover:bg-gray-100 transition disabled:opacity-50"
-                >
-                    ← Atrás
-                </button>
+                <p className="font-semibold text-green-800">
+                    📲 Último paso
+                </p>
 
-                <button
-                    onClick={confirmarPedido}
-                    disabled={enviando}
-                    className="flex-1 rounded-2xl bg-red-600 text-white py-4 font-semibold hover:opacity-90 transition disabled:opacity-50"
-                >
-                    {enviando ? "ENVIANDO..." : "CONFIRMAR PEDIDO"}
-                </button>
+                <p className="mt-2 text-sm text-green-700 leading-relaxed">
+                    Al presionar el botón se abrirá WhatsApp con toda la información de tu
+                    pedido. Solo tendrás que enviar el mensaje para que podamos confirmar tu
+                    compra.
+                </p>
 
             </div>
 
+            <button
+                onClick={atras}
+                disabled={enviando}
+                className="flex-1 rounded-2xl border py-4 font-semibold hover:bg-gray-100 transition disabled:opacity-50"
+            >
+                ← Atrás
+            </button>
+
+            <button
+                onClick={confirmarPedido}
+                disabled={enviando}
+                className="flex-1 rounded-2xl bg-[#25D366] hover:bg-[#1EBE5D] text-white py-4 font-semibold hover:opacity-90 transition disabled:opacity-50"
+            >
+                {enviando ? "ABRIENDO WHATSAPP..." : "📲 Enviar por WhatsApp"}
+            </button>
+
         </div>
+
+        </div >
 
     );
 
