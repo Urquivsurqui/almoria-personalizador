@@ -2,6 +2,7 @@ import { ConfiguradorProvider } from "./context/ConfiguradorContext";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import MetaPixel from "@/components/MetaPixel";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -79,6 +80,7 @@ export default function RootLayout({
           {children}
         </ConfiguradorProvider>
 
+        <MetaPixel />
         <GoogleAnalytics gaId="G-52JLKJM7NS" />
       </body>
     </html>
