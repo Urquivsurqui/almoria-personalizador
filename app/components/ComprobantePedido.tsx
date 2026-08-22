@@ -90,7 +90,7 @@ export default function ComprobantePedido({
 
         fraseMetal: pedido.fraseMetal,
 
-        precio: Number(pedido.precio ?? 69.99),
+        precio: Number(pedido.precio ?? 79.99),
 
         envio: {
 
@@ -363,7 +363,7 @@ export default function ComprobantePedido({
 
                             <p className="text-3xl font-bold mt-2">
 
-                                S/ {Number(pedido.precio ?? 69.99).toFixed(2)}
+                                S/ {Number(pedido.precio ?? 79.99).toFixed(2)}
 
                             </p>
                             <p className="text-sm opacity-70 mt-1">
