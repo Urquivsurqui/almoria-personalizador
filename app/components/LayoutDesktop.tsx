@@ -47,7 +47,7 @@ export default function Configurador() {
                                         </p>
 
                                         <p className="text-3xl xl:text-4xl font-bold text-amber-800">
-                                            S/79.99
+                                            S/85.00
                                         </p>
 
                                     </div>

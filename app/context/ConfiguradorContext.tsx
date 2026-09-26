@@ -118,7 +118,7 @@ export function ConfiguradorProvider({
 
         fraseMetal: "",
 
-        precio: 79.99,
+        precio: 85.00,
 
         envio: {
 

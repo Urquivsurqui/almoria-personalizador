@@ -58,7 +58,7 @@ export default function LayoutMobile() {
                                 </div>
 
                                 <h2 className="mt-2 text-3xl lg:text-4xl font-bold text-[#9d4b00]">
-                                    S/79.99
+                                    S/85.00
                                 </h2>
 
                                 <p className="mt-2 text-sm text-gray-500">
